@@ -16,6 +16,7 @@ public class createpage extends HttpServlet {
 		PrintWriter out=res.getWriter();
 		try
 		{
+			
 			Class.forName("org.postgresql.Driver");
 			String jdbcUrl="jdbc:postgresql://13.250.40.165:5432/postgres";
 			String username="postgres";
@@ -36,6 +37,7 @@ public class createpage extends HttpServlet {
 			
 			String sql1= "SELECT  * FROM avt;";
 			ResultSet rs= statement.executeQuery(sql1);
+			
 			
 			
 			        out.println("<html>");
